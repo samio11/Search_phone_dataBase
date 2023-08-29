@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="text-center mt-10">
+        <input type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" id="input_field" />
+        <button onclick="searchBtn()" class="btn btn-outline btn-primary">search</button>
+    </header>
+    <main>
+        <section>
+            <!-- Spinner Div -->
+            <div class="text-center hidden" id="spinner_container">
+                <span className="loading loading-infinity loading-lg"></span>
+            </div>
+            <!-- card section -->
+            <div class="max-w-screen-xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="parent_card">
+                <!-- sample of a card -->
+               
+                <!-- end card -->
+            </div>
+            <!-- show button container -->
+            <div class="text-center hidden mt-5" id="s1">
+                <button onclick="loadMoreBtn()" class="btn btn-success text-white">Load More</button>
+            </div>
+            <!-- modal part -->
+            <dialog id="my_modal_info" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                  <div class="text-center w-full" id="modal_full_container">
+
+                  </div>
+                  <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </form>
+              </dialog>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./h1.js"></script>
+</body>
+
+</html>
