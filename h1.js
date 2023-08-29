@@ -70,6 +70,7 @@ let getDetail = data2 =>{
     console.log(data2);
     // showModal
     let container = document.getElementById('modal_full_container');
+    container.textContent = '';
     console.log(container);
     let div = document.createElement('div')
     div.innerHTML = `
